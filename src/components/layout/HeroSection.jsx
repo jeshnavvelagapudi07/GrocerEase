@@ -3,7 +3,7 @@ import { Button } from '../ui/Button.jsx';
 
 /**
  * Hero Section Component
- * Main landing section with call-to-action
+ * Main landing section with call-to-action with video background
  */
 export function HeroSection() {
   const navigate = useNavigate();
@@ -14,6 +14,15 @@ export function HeroSection() {
 
   return (
     <section className="hero">
+      {/* Video Background */}
+      <video className="hero__video" autoPlay muted loop playsInline controls={false}>
+        <source src="/WhatsApp Video 2026-02-19 at 5.47.46 PM.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      
+      {/* Overlay for better text readability */}
+      <div className="hero__overlay"></div>
+      
       <div className="hero__container">
         <div className="hero__content">
           <h1 className="hero__title">
